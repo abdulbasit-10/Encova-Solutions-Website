@@ -1,0 +1,11 @@
+# robots.txt for Encova Solutions
+
+User-agent: *
+Allow: /
+
+# Disallow admin or sensitive pages (if any in future)
+# Disallow: /admin/
+
+# Sitemap location
+Sitemap: https://encovasolutions.com/sitemap.xml
+
