@@ -122,12 +122,12 @@ const Footer = () => {
                   UI/UX Design
                 </Link>
               </li>
-              {/* <li>
+              <li>
                 <Link to="/services/saas" className="text-gray-600 hover:text-gray-900 transition-colors text-sm">
                   SaaS Development
                 </Link>
               </li>
-              <li>
+              {/* <li>
                 <Link to="/services" className="text-gray-600 hover:text-gray-900 transition-colors text-sm">
                   Cloud & DevOps
                 </Link>
@@ -197,4 +197,3 @@ const Footer = () => {
 };
 
 export default Footer;
-

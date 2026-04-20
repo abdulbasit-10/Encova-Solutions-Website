@@ -154,92 +154,8 @@ const Careers = () => {
         </div>
       </section>
 
-      {/* Open Positions */}
-      <section className="py-20 bg-white">
-        <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
-          <SectionTitle 
-            title="Open Positions"
-            subtitle="Join Us"
-            centered
-          />
-
-          <div className="grid grid-cols-1 gap-6 mt-12 max-w-5xl mx-auto">
-            {siteConfig.careers.map((job) => (
-              <Card 
-                key={job.id} 
-                className="hover:border-gray-400 transition-all cursor-pointer p-6 border-2 border-gray-300"
-                onClick={() => setSelectedJob(selectedJob === job.id ? null : job.id)}
-              >
-                <div className="flex flex-col md:flex-row md:items-center md:justify-between">
-                  <div className="flex-1">
-                    <div className="flex items-center gap-3 mb-2">
-                      <h3 className="text-2xl font-bold text-gray-900">{job.title}</h3>
-                      <span className={`px-3 py-1 rounded-full text-xs font-semibold ${
-                        job.type === 'Full-time' 
-                          ? 'bg-gray-200 text-gray-700' 
-                          : 'bg-green-100 text-green-700'
-                      }`}>
-                        {job.type}
-                      </span>
-                    </div>
-                    <div className="flex flex-wrap gap-4 text-sm text-gray-600 mb-3">
-                      <span className="flex items-center">
-                        <svg className="w-4 h-4 mr-1" fill="none" stroke="currentColor" viewBox="0 0 24 24">
-                          <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M12 8v4l3 3m6-3a9 9 0 11-18 0 9 9 0 0118 0z" />
-                        </svg>
-                        {job.experience}
-                      </span>
-                      <span className="flex items-center">
-                        <svg className="w-4 h-4 mr-1" fill="none" stroke="currentColor" viewBox="0 0 24 24">
-                          <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M10 20l4-16m4 4l4 4-4 4M6 16l-4-4 4-4" />
-                        </svg>
-                        {job.stack}
-                      </span>
-                    </div>
-                    <p className="text-gray-600">{job.description}</p>
-                  </div>
-                  <button className="mt-4 md:mt-0 md:ml-6 flex items-center text-gray-700 font-medium">
-                    {selectedJob === job.id ? 'Hide Details' : 'View Details'}
-                    <svg 
-                      className={`w-5 h-5 ml-2 transition-transform ${selectedJob === job.id ? 'rotate-180' : ''}`} 
-                      fill="none" 
-                      stroke="currentColor" 
-                      viewBox="0 0 24 24"
-                    >
-                      <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M19 9l-7 7-7-7" />
-                    </svg>
-                  </button>
-                </div>
-
-                {/* Expanded Details */}
-                {selectedJob === job.id && (
-                  <div className="mt-6 pt-6 border-t border-gray-200">
-                    <h4 className="text-lg font-semibold text-gray-900 mb-4">Requirements:</h4>
-                    <ul className="space-y-2 mb-6">
-                      {job.requirements.map((req, index) => (
-                        <li key={index} className="flex items-start text-gray-600">
-                          <svg className="w-5 h-5 mr-2 text-gray-700 flex-shrink-0 mt-0.5" fill="none" stroke="currentColor" viewBox="0 0 24 24">
-                            <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M5 13l4 4L19 7" />
-                          </svg>
-                          {req}
-                        </li>
-                      ))}
-                    </ul>
-                    <button 
-                     className='text-white bg-gray-700 hover:bg-gray-600 focus:ring-gray-200 shadow-lg px-6 py-3 text-base rounded-lg font-semibold'
-                    onClick={() => window.location.href = '/contact'}>
-                      Apply Now
-                    </button>
-                  </div>
-                )}
-              </Card>
-            ))}
-          </div>
-        </div>
-      </section>
-
       {/* Application Process */}
-      {/* <section className="py-20 bg-gray-50">
+      <section className="py-20 bg-gray-50">
         <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
           <SectionTitle 
             subtitle="How to Apply"
@@ -285,7 +201,7 @@ const Careers = () => {
             ))}
           </div>
         </div>
-      </section> */}
+      </section>
 
       {/* CTA Section */}
       <section className="py-12 sm:py-16 md:py-20 bg-gradient-to-r from-[#6B7280] to-[#4B5563]">

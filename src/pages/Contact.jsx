@@ -339,67 +339,7 @@ const Contact = () => {
                     <p className="mt-1 text-sm text-red-400">{errors.message}</p>
                   )}
                 </div>
-
-                {/* File Upload */}
-                {/* <div>
-                  <label htmlFor="file" className="block text-sm font-medium text-gray-700 mb-2">
-                    Attach File (Optional)
-                  </label>
-                  <p className="text-xs text-gray-600 mb-2">
-                    Upload CV, Resume, or relevant documents (PDF, DOC, DOCX, JPG, PNG - Max 5MB)
-                  </p>
-                  <p className="text-xs text-yellow-600 mb-2">
-                    Note: File name will be included in your message. For actual file delivery, please send via email.
-                  </p>
-                  
-                  {!file ? (
-                    <div className="relative">
-                      <input
-                        type="file"
-                        id="file"
-                        onChange={handleFileChange}
-                        accept=".pdf,.doc,.docx,.jpg,.jpeg,.png"
-                        className="hidden"
-                      />
-                      <label
-                        htmlFor="file"
-                        className={`w-full px-4 py-3 bg-white border ${errors.file ? 'border-red-500' : 'border-gray-300'} rounded-lg text-gray-600 hover:border-gray-500 transition-colors cursor-pointer flex items-center justify-center space-x-2`}
-                      >
-                        <svg className="w-5 h-5" fill="none" stroke="currentColor" viewBox="0 0 24 24">
-                          <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M7 16a4 4 0 01-.88-7.903A5 5 0 1115.9 6L16 6a5 5 0 011 9.9M15 13l-3-3m0 0l-3 3m3-3v12" />
-                        </svg>
-                        <span>Click to upload file</span>
-                      </label>
-                    </div>
-                  ) : (
-                    <div className="flex items-center justify-between px-4 py-3 bg-white border border-gray-300 rounded-lg">
-                      <div className="flex items-center space-x-3 flex-1 min-w-0">
-                        <svg className="w-5 h-5 text-gray-700 flex-shrink-0" fill="none" stroke="currentColor" viewBox="0 0 24 24">
-                          <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M9 12h6m-6 4h6m2 5H7a2 2 0 01-2-2V5a2 2 0 012-2h5.586a1 1 0 01.707.293l5.414 5.414a1 1 0 01.293.707V19a2 2 0 01-2 2z" />
-                        </svg>
-                        <div className="flex-1 min-w-0">
-                          <p className="text-gray-900 text-sm truncate">{file.name}</p>
-                          <p className="text-gray-600 text-xs">{(file.size / 1024).toFixed(2)} KB</p>
-                        </div>
-                      </div>
-                      <button
-                        type="button"
-                        onClick={removeFile}
-                        className="ml-2 text-red-400 hover:text-red-300 transition-colors flex-shrink-0"
-                        aria-label="Remove file"
-                      >
-                        <svg className="w-5 h-5" fill="none" stroke="currentColor" viewBox="0 0 24 24">
-                          <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M6 18L18 6M6 6l12 12" />
-                        </svg>
-                      </button>
-                    </div>
-                  )}
-                  
-                  {errors.file && (
-                    <p className="mt-1 text-sm text-red-400">{errors.file}</p>
-                  )}
-                </div> */}
-
+                
                 <Button
                   type="submit"
                   variant="primary"
@@ -523,28 +463,7 @@ const Contact = () => {
                   </a>
                 </div>
               </div>
-
-
-              {/* Office Hours */}
-              {/* <Card className="mt-8">
-                <h3 className="text-gray-900 font-semibold mb-4">Office Hours</h3>
-                <div className="space-y-2 text-gray-600">
-                  <div className="flex justify-between">
-                    <span>Monday - Friday</span>
-                    <span className="text-gray-900">9:00 AM - 6:00 PM</span>
-                  </div>
-                  <div className="flex justify-between">
-                    <span>Saturday</span>
-                    <span className="text-gray-900">10:00 AM - 4:00 PM</span>
-                  </div>
-                  <div className="flex justify-between">
-                    <span>Sunday</span>
-                    <span className="text-gray-900">Closed</span>
-                  </div>
-                </div>
-              </Card> */}
-
-
+{/* 
               <div className="bg-[#6B7280] rounded-2xl shadow-lg p-8 border-2  border-gray-500 mt-6">
                 <h3 className="text-xl font-bold text-white mb-4">Ready to get started?</h3>
                 <p className="text-white mb-6">
@@ -554,86 +473,15 @@ const Contact = () => {
                 <Button to="/contact" variant="primary" className="w-full sm:w-auto bg-white !text-gray-700 hover:bg-gray-100 text-xl">
                   Book a Call
                 </Button>
-              </div>
+              </div> */}
             </div>
           </div>
         </div>
       </section>
-
-      {/* Map Section - Placeholder */}
-      {/* <section className="h-96 bg-gray-800 relative overflow-hidden">
-        <div className="absolute inset-0 flex items-center justify-center">
-          <div className="text-center">
-            <svg className="w-16 h-16 text-gray-600 mx-auto mb-4" fill="none" stroke="currentColor" viewBox="0 0 24 24">
-              <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M17.657 16.657L13.414 20.9a1.998 1.998 0 01-2.827 0l-4.244-4.243a8 8 0 1111.314 0z" />
-              <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M15 11a3 3 0 11-6 0 3 3 0 016 0z" />
-            </svg>
-            <p className="text-gray-400">Map integration placeholder</p>
-            <p className="text-gray-500 text-sm mt-2">{siteConfig.contact.address}</p>
-          </div>
-        </div>
-      </section> */}
-
-      <section className="py-20 bg-white ">
-        <div className="max-w-4xl mx-auto px-4 sm:px-6 lg:px-8">
-          {/* Header */}
-          <div className="text-center mb-8 sm:mb-12">
-            <h2 className="text-2xl sm:text-3xl lg:text-4xl font-bold text-gray-900 mb-2">
-              Frequently Asked Questions
-            </h2>
-            <p className="text-sm sm:text-base text-gray-600">
-              Find answers to common questions about working with Encova Solutions.
-            </p>
-          </div>
-
-          {/* FAQ items */}
-          <div className="space-y-4 sm:space-y-6 w-full">
-            {faqs.map((faq, index) => (
-              <div
-                key={index}
-                className="p-4 sm:p-6 rounded-lg bg-gray-50 border border-gray-200"
-              >
-                <h3 className="font-semibold text-sm sm:text-base text-gray-900 mb-2">{faq.question}</h3>
-                <p className="text-sm sm:text-base text-gray-700" style={{ whiteSpace: 'pre-line' }}>{faq.answer}</p>
-              </div>
-            ))}
-          </div>
-
-          {/* Contact link */}
-          <div className="text-center mt-8 sm:mt-10 text-gray-600 px-2">
-            <p className="text-sm sm:text-base">Still have questions?</p>
-            <a
-              href="/contact"
-              className="inline-flex items-center mt-2 text-gray-600 font-normal hover:underline text-sm sm:text-base flex  items-center justify-center gap-1 "
-            >
-              Contact our team <a href={`mailto:${siteConfig.contact.email}`} className="text-gray-600 hover:text-gray-800 transition-colors">
-                <svg className="w-6 h-6 text-gray-700" fill="none" stroke="currentColor" viewBox="0 0 24 24">
-                  <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M3 8l7.89 5.26a2 2 0 002.22 0L21 8M5 19h14a2 2 0 002-2V7a2 2 0 00-2-2H5a2 2 0 00-2 2v10a2 2 0 002 2z" />
-                </svg>
-              </a>
-            </a>
-          </div>
-        </div>
-      </section>
-
       <div>
-        <div className=''>
-          <iframe
-            src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d3307.677390836361!2d71.54286077517469!3d34.00081932044483!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x38d917bf1e05455d%3A0x9bb0d74b7b5d5600!2sDeans%20Shopping%20Mall%20(Deans%20Trade%20Center%20Peshawar)!5e0!3m2!1sen!2s!4v1770201743852!5m2!1sen!2s"
-            width="100%"
-            height="450"
-            style={{ border: 0 }}
-            allowFullScreen
-            loading="lazy"
-            referrerPolicy="no-referrer-when-downgrade"
-            className="rounded-lg"
-          />
-
-        </div>
       </div>
     </div>
   );
 };
 
 export default Contact;
-
