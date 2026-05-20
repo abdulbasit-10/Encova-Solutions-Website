@@ -15,7 +15,7 @@ const Card = ({
 
   return (
     <div 
-      className={`bg-white rounded-2xl border border-gray-50 hover:shadow-2xl${paddingStyles[padding]} ${
+      className={`bg-white rounded-2xl border border-gray-50 hover:shadow-2xl ${paddingStyles[padding]} ${
         hover ? 'hover:border-gray-500' : ''
       } ${className}`}
       {...props}

@@ -3,13 +3,13 @@ import Card from '../components/Card';
 
 const PrivacyPolicy = () => {
   return (
-    <div className="bg-white pt-20">
-      <section className="py-20">
+    <div className="bg-white pt-16">
+      <section className="py-12">
         <div className="max-w-4xl mx-auto px-4 sm:px-6 lg:px-8">
           <h1 className="text-4xl md:text-5xl font-bold text-gray-900 mb-6">Privacy Policy</h1>
           <p className="text-gray-600 mb-8">Last updated: December 6, 2025</p>
 
-          <Card className="mb-8">
+          <Card className="mb-8 p-5 sm:p-6">
             <div className="prose max-w-none text-gray-700">
               <h2 className="text-2xl font-bold text-gray-900 mb-4">1. Introduction</h2>
               <p className="mb-4">
@@ -92,4 +92,3 @@ const PrivacyPolicy = () => {
 };
 
 export default PrivacyPolicy;
-

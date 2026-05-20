@@ -5,10 +5,19 @@ import encova from '../../public/encova.svg';
 
 const Footer = () => {
   const currentYear = new Date().getFullYear();
+  const quickLinks = [
+    { label: 'Home', to: '/' },
+    { label: 'About Us', to: '/about' },
+    { label: 'Services', to: '/services' },
+    { label: 'How We Work', to: '/how-we-work' },
+    { label: 'Projects', to: '/portfolio' },
+    { label: 'Career', to: '/careers' },
+    { label: 'Contact', to: '/contact' },
+  ];
 
   return (
     <footer className="bg-[#F9FAFB] text-gray-700 border-t-3 border-gray-500">
-      <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 py-16">
+      <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 py-10">
         <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-12 ">
           {/* Company Info */}
           <div>
@@ -80,26 +89,13 @@ const Footer = () => {
           <div  className='px-0 md:px-14 lg:px-16'>
             <h3 className="text-base font-semibold text-gray-900 mb-4 hover:underline">Quick Links</h3>
             <ul className="space-y-3">
-              <li>
-                <Link to="/about" className="text-gray-600 hover:text-gray-900 transition-colors text-base hover:underline">
-                  About Us
-                </Link>
-              </li>
-              <li>
-                <Link to="/services" className="text-gray-600 hover:text-gray-900 transition-colors text- hover:underline">
-                  Services
-                </Link>
-              </li>
-              <li>
-                <Link to="/portfolio" className="text-gray-600 hover:text-gray-900 transition-colors text-base hover:underline">
-                  Portfolio
-                </Link>
-              </li>
-              <li>
-                <Link to="/careers" className="text-gray-600 hover:text-gray-900 transition-colors text-base hover:underline">
-                  Careers
-                </Link>
-              </li>
+              {quickLinks.map((link) => (
+                <li key={link.to}>
+                  <Link to={link.to} className="text-gray-600 hover:text-gray-900 transition-colors text-base hover:underline">
+                    {link.label}
+                  </Link>
+                </li>
+              ))}
             </ul>
           </div>
 
@@ -107,36 +103,13 @@ const Footer = () => {
           <div>
             <h3 className="text-base font-semibold text-gray-900 mb-4 hover:underline">Services</h3>
             <ul className="space-y-3">
-              <li>
-                <Link to="/services/web" className="text-gray-600 hover:text-gray-900 transition-colors text-base hover:underline">
-                  Web Development
-                </Link>
-              </li>
-              <li>
-                <Link to="/services/app" className="text-gray-600 hover:text-gray-900 transition-colors text-base hover:underline">
-                  App Development
-                </Link>
-              </li>
-              <li>
-                <Link to="/services/uiux" className="text-gray-600 hover:text-gray-900 transition-colors text-base hover:underline">
-                  UI/UX Design
-                </Link>
-              </li>
-              <li>
-                <Link to="/services/saas" className="text-gray-600 hover:text-gray-900 transition-colors text-sm">
-                  SaaS Development
-                </Link>
-              </li>
-              {/* <li>
-                <Link to="/services" className="text-gray-600 hover:text-gray-900 transition-colors text-sm">
-                  Cloud & DevOps
-                </Link>
-              </li> */}
-              <li>
-                <Link to="/services/ai" className="text-gray-600 hover:text-gray-900 transition-colors text-base hover:underline">
-                  Artificial Intelligence
-                </Link>
-              </li>
+              {siteConfig.services.map((service) => (
+                <li key={service.id}>
+                  <Link to={`/services/${service.id}`} className="text-gray-600 hover:text-gray-900 transition-colors text-base hover:underline">
+                    {service.name}
+                  </Link>
+                </li>
+              ))}
             </ul>
           </div>
 
@@ -173,7 +146,7 @@ const Footer = () => {
           </div>
         </div>
 
-        <div className="mt-12 pt-8 border-t border-gray-200">
+        <div className="mt-8 pt-6 border-t border-gray-200">
           <div className="flex flex-col md:flex-row justify-between items-center gap-4">
             <p className="text-gray-600 text-sm">
               © {currentYear} Encova Solutions. All rights reserved.

@@ -1,4 +1,4 @@
-import React, { useState, useEffect } from "react";
+import React, { useState } from "react";
 import { Link } from "react-router-dom";
 import Button from "../components/Button";
 import SectionTitle from "../components/SectionTitle";
@@ -13,30 +13,33 @@ import expert from "../assets/homeAssets/expert.svg";
 import fast from "../assets/homeAssets/fast.svg";
 import qa from "../assets/homeAssets/qa.svg";
 import support from "../assets/homeAssets/support.svg";
-import email from "../assets/contactAssests/email.svg";
-import phone from "../assets/contactAssests/phone.svg";
-import location from "../assets/contactAssests/location.svg";
-import github from "../assets/contactAssests/github.svg";
-import linkedin from "../assets/contactAssests/linkedin.svg";
-import twitter from "../assets/contactAssests/twitter.svg";
 import message from "../assets/contactAssests/message.svg";
 
 const Home = () => {
-  const words = ["Solution", "Experiences", "Excellence", "Innovation"];
-  const [currentWordIndex, setCurrentWordIndex] = useState(0);
+  const [expandedProjectIds, setExpandedProjectIds] = useState({});
+  const projectDescriptionPreviewLength = 155;
 
-  useEffect(() => {
-    const interval = setInterval(() => {
-      setCurrentWordIndex((prevIndex) => (prevIndex + 1) % words.length);
-    }, 2000);
+  const toggleProjectDescription = (projectId) => {
+    setExpandedProjectIds((current) => ({
+      ...current,
+      [projectId]: !current[projectId],
+    }));
+  };
 
-    return () => clearInterval(interval);
-  }, [words.length]);
+  const getProjectDescriptionPreview = (description) => {
+    const cleanDescription = description.trim().replace(/\s+/g, " ");
+
+    if (cleanDescription.length <= projectDescriptionPreviewLength) {
+      return cleanDescription;
+    }
+
+    return `${cleanDescription.slice(0, projectDescriptionPreviewLength).trim()}...`;
+  };
 
   return (
     <div className="bg-white py-16">
       {/* Hero Section */}
-      <section className="relative min-h-screen flex items-center justify-center overflow-hidden">
+      <section className="relative min-h-[550px] flex items-center justify-center overflow-hidden">
         {/* Background Video */}
         <div className="absolute inset-0 w-full h-full overflow-hidden">
           <video
@@ -53,34 +56,26 @@ const Home = () => {
         </div>
 
         {/* Hero Content */}
-        <div className="relative z-10 max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 py-20 text-center">
+        <div className="relative z-10 max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 text-center ">
           <div className="space-y-8 flex flex-col justify-center items-center">
-            <h1 className="text-4xl sm:text-4xl md:text-6xl lg:text-8xl font-bold text-gray-900 leading-tight ">
+            <h1 className="text-4xl sm:text-4xl md:text-6xl lg:text-7xl font-bold text-gray-900 leading-[70px]">
               <span className="block">Transforming Ideas Into</span>
 
-              <span className="mt-2 flex items-center  gap-3 border-gray-200 px-4 py-2 text-gray-500">
-                {/* Fixed word */}
-                <span>Digital</span>
-
-                {/* Changing word only */}
-                <span className="relative inline-block  text-left">
-                  <span className="animate-word-rotate inline-block">
-                    {words[currentWordIndex]}
-                  </span>
-                </span>
+              <span className="mt-2 block text-center text-gray-500">
+                Digital Experience
               </span>
             </h1>
 
-            <p className="text-xl md:text-3xl text-gray-900 max-w-5xl mx-auto">
+            <p className="text-lg md:text-2xl text-gray-900 max-w-4xl mx-auto">
               A leading IT company delivering scalable web, mobile, UI/UX, AI,
               and design services for modern businesses.
             </p>
 
-            <div className="flex flex-col sm:flex-row gap-4 justify-center items-center pt-8">
+            <div className="flex flex-col sm:flex-row gap-4 justify-center items-center pt-1">
               <Button
                 to="/contact"
                 variant="primary"
-                size="large"
+                size="medium"
                 className="gap-2 flex justify-center items-center bg-gray-600! hover:bg-gray-700!"
               >
                 <img src={contact} alt={contact} />
@@ -90,7 +85,7 @@ const Home = () => {
               <Button
                 to="/services"
                 variant="outline"
-                size="large"
+                size="medium"
                 className=" hover:text-white border-none flex justify-center items-center gap-2"
               >
                 <img
@@ -106,7 +101,7 @@ const Home = () => {
       </section>
 
       {/* Services Overview */}
-      <section className="py-20 bg-white">
+      <section className="py-12 bg-white">
         <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
           <SectionTitle title="Our Services" centered />
 
@@ -117,8 +112,8 @@ const Home = () => {
             </p>
           </div>
 
-          <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-8 mt-12">
-            {siteConfig.services.slice(0, 6).map((service) => (
+          <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-8 mt-8">
+            {siteConfig.services.slice(0, 3).map((service) => (
               <Link key={service.id} to={`/services/${service.id}`}>
                 <Card className="h-full group cursor-pointer p-6 border-gray-200 hover:border-gray-500 border-2">
                   <div className="mb-4 inline-block bg-[#F9FAFB] p-4 rounded-xl transition-all duration-200 group-hover:bg-[#6B7280]">
@@ -155,8 +150,8 @@ const Home = () => {
             ))}
           </div>
 
-          <div className="text-center mt-12">
-            <Button to="/services" variant="primary" size="large">
+          <div className="text-center mt-8">
+            <Button to="/services" variant="primary" size="medium">
               View All Services
             </Button>
           </div>
@@ -164,9 +159,9 @@ const Home = () => {
       </section>
 
       {/* Why Choose Us Section */}
-      <section className="py-20 bg-gray-50">
+      <section className="py-12 bg-gray-50">
         <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
-          <div className="text-center mb-12">
+          <div className="text-center mb-8">
             <h2 className="text-3xl md:text-4xl font-bold text-gray-900 mb-4">
               Why Choose Encova Solutions
             </h2>
@@ -218,7 +213,7 @@ const Home = () => {
             </div>
 
             {/* Right Side - Track Record Card */}
-            <div className="bg-white rounded-2xl shadow-lg p-8">
+            <div className="bg-white rounded-2xl shadow-lg p-7">
               <h3 className="text-2xl font-bold text-[#6B7280] text-center mb-8">
                 Our Track Record
               </h3>
@@ -323,7 +318,7 @@ const Home = () => {
       </section>
 
       {/* Featured Projects */}
-      <section className="py-20 bg-gray-100">
+      <section className="py-12 bg-gray-100">
         <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
           {/* <SectionTitle 
             title="Featured Projects"
@@ -340,25 +335,35 @@ const Home = () => {
               transform their <br /> digital presence.
             </p>
           </div>
-          <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-8 mt-12 ">
-            {siteConfig.portfolio.slice(0, 3).map((project) => (
-              <Card
-                key={project.id}
-                className="overflow-hidden p-0 group cursor-pointer border-gray-200 hover:border-none border-2 shadow-2xl"
-              >
-                <div className="h-48 flex items-center justify-center relative overflow-hidden">
-                  <img
-                    src={project.image}
-                    alt={project.title}
-                    className="w-full h-full object-cover group-hover:scale-110 transition-transform duration-300 "
-                  />
-                  {/* <div className="absolute inset-0 bg-black/50 opacity-0 group-hover:opacity-100 transition-opacity flex items-center justify-center">
+          <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-8 mt-8 ">
+            {siteConfig.portfolio.slice(0, 3).map((project) => {
+              const isExpanded = expandedProjectIds[project.id];
+              const cleanDescription = project.description.trim();
+              const isLongDescription =
+                cleanDescription.replace(/\s+/g, " ").length >
+                projectDescriptionPreviewLength;
+              const displayedDescription = isExpanded
+                ? cleanDescription
+                : getProjectDescriptionPreview(cleanDescription);
+
+              return (
+                <Card
+                  key={project.id}
+                  className="overflow-hidden p-0 group border-gray-200 border-2 shadow-2xl transition-transform duration-300 hover:scale-[1.03] hover:z-10"
+                >
+                  <div className="h-48 flex items-center justify-center relative overflow-hidden">
+                    <img
+                      src={project.image}
+                      alt={project.title}
+                      className="w-full h-full object-cover group-hover:scale-110 transition-transform duration-300 "
+                    />
+                    {/* <div className="absolute inset-0 bg-black/50 opacity-0 group-hover:opacity-100 transition-opacity flex items-center justify-center">
                     <Button variant="primary">View Details</Button>
                   </div> */}
-                </div>
-                <div className="p-6">
-                  <div
-                    className="inline-block
+                  </div>
+                  <div className="p-6">
+                    <div
+                      className="inline-block
         text-base 
         uppercase 
         mb-2 
@@ -367,42 +372,47 @@ const Home = () => {
         origin-left
         transition-all
         duration-300
-        group-hover:px-3
-        group-hover:py-1
         group-hover:bg-gray-200
-        group-hover:border
-        group-hover:border-gray-300
-        group-hover:rounded-full
-        group-hover:scale-x-110"
-                  >
-                    {
-                      siteConfig.services.find((s) => s.id === project.category)
-                        ?.name
-                    }
-                  </div>
-                  <h3 className="text-xl font-bold text-gray-900 mb-2">
-                    {project.title}
-                  </h3>
-                  <p className="text-gray-700 text-sm mb-4">
-                    {project.description}
-                  </p>
-                  {/* <div className="flex flex-wrap gap-2">
+        group-hover:rounded-full"
+                    >
+                      {
+                        siteConfig.services.find((s) => s.id === project.category)
+                          ?.name
+                      }
+                    </div>
+                    <h3 className="text-xl font-bold text-gray-900 mb-2">
+                      {project.title}
+                    </h3>
+                    <p className="text-gray-700 text-sm mb-2 whitespace-pre-line">
+                      {displayedDescription}
+                    </p>
+                    {isLongDescription && (
+                      <button
+                        type="button"
+                        onClick={() => toggleProjectDescription(project.id)}
+                        className="text-sm font-semibold text-gray-600 hover:text-gray-900 transition-colors"
+                      >
+                        {isExpanded ? "View Less" : "View More"}
+                      </button>
+                    )}
+                    {/* <div className="flex flex-wrap gap-2">
                     {project.technologies.slice(0, 3).map((tech, i) => (
                       <span key={i} className="px-3 py-1 bg-gray-50 border border-gray-400 text-gray-600 text-xs rounded-full">
                         {tech}
                       </span>
                     ))}
                   </div> */}
-                </div>
-              </Card>
-            ))}
+                  </div>
+                </Card>
+              );
+            })}
           </div>
 
-          <div className="text-center mt-12">
+          <div className="text-center mt-8">
             <Button
               to="/portfolio"
               variant="primary"
-              size="large"
+              size="medium"
               className="flex items-center justify-center gap-2"
             >
               View All Projects{" "}
@@ -413,12 +423,10 @@ const Home = () => {
       </section>
 
       {/* Testimonials */}
-      <section className="py-20 bg-white">
+      <section className="py-12 bg-white">
         <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
           <SectionTitle title="What Our Clients Say" centered />
-          <div className="flex justify-center items-center flex-col gap-10 text-[#374151] mb-8">
-          </div>
-          <div className="mt-12">
+          <div className="mt-8">
             <TestimonialCarousel />
           </div>
         </div>
@@ -539,7 +547,7 @@ const ContactFormSection = () => {
       {isSubmitted && (
         <div className="mb-6 p-4 bg-green-50 border border-green-200 rounded-lg">
           <p className="text-green-700 font-medium">
-            ✓ Thank you! Your message has been sent successfully. We'll get back
+            Success: Thank you! Your message has been sent successfully. We'll get back
             to you soon.
           </p>
         </div>

@@ -5,6 +5,7 @@ import uiuxIcon from "../assets/homeAssets/uiux.svg";
 import aiIcon from "../assets/homeAssets/ai.svg";
 import cloudIcon from "../assets/homeAssets/cloud.svg";
 import saasIcon from "../assets/homeAssets/saas.svg";
+import digitalMarketingIcon from "../assets/homeAssets/digitalMarketing.svg";
 
 export const siteConfig = {
   name: "Encova Solutions",
@@ -168,9 +169,9 @@ export const siteConfig = {
     {
       id: "saas",
       name: "SaaS Development",
-      firstname: "Saas ",
+      firstname: "SaaS ",
       secondname: "Development",
-      shortDesc: "Visual identity that tells your story",
+      shortDesc: "Scalable subscription-based platforms for modern businesses",
       description:
         "Build scalable, secure, and feature-rich Software-as-a-Service platforms. We develop end-to-end SaaS solutions with subscription management, multi-tenancy, and enterprise-grade features.",
       icon: saasIcon,
@@ -201,10 +202,10 @@ export const siteConfig = {
     },
     {
       id: "cloud",
-      name: "Cloud & Devops ",
+      name: "Cloud & DevOps",
       firstname: "Cloud &",
-      secondname: "Devops",
-      shortDesc: "Visual identity that tells your story",
+      secondname: "DevOps",
+      shortDesc: "Reliable cloud infrastructure and automated delivery pipelines",
       description:
         "Architected and maintained cloud-native environments on AWS, Azure, and GCP with fully automated CI/CD pipelines, enabling faster releases, high availability, and operational efficiency.",
       icon: cloudIcon,
@@ -231,6 +232,38 @@ export const siteConfig = {
         "Grafana",
         "Gitlab CI/CD",
         "ELK Stack",
+      ],
+    },
+    {
+      id: "digital-marketing",
+      name: "Digital Marketing",
+      firstname: "Digital",
+      secondname: "Marketing",
+      shortDesc: "Growth-focused campaigns that increase visibility and leads",
+      description:
+        "We create data-driven digital marketing strategies that help your brand reach the right audience, generate qualified leads, and grow across search, social, and paid channels.",
+      icon: digitalMarketingIcon,
+      features: [
+        "Search engine optimization (SEO)",
+        "Social media marketing",
+        "Paid ads campaign management",
+        "Content strategy and planning",
+        "Lead generation funnels",
+        "Email marketing campaigns",
+        "Analytics and performance reporting",
+        "Conversion rate optimization",
+      ],
+      technologies: [
+        "Google Ads",
+        "Meta Ads",
+        "Google Analytics",
+        "Google Search Console",
+        "SEMrush",
+        "Ahrefs",
+        "Mailchimp",
+        "HubSpot",
+        "Canva",
+        "LinkedIn Ads",
       ],
     },
   ],
@@ -320,36 +353,32 @@ The website focuses on smooth navigation and an engaging user experience, provid
       position: "CEO, JKD Pakistan",
       content:
         "Working with Encova Solutions was an absolute pleasure. They developed a custom web application for our business that has significantly improved our operations and customer engagement. Their team is professional, responsive, and truly cares about delivering quality results.",
-      rating: 5,
       avatar: "/images/testimonials/avatar1.jpg",
     },
     {
       id: 2,
-      name: "Sarah Lee",
-      position: "Founder, Startup Hub",
+      name: "Nuzhat Rasheed Qureshi",
+      position: "Founder, Marketing Agency",
       content:
         "Working with Encova was a game-changer for our startup. They developed our mobile app with precision and creativity, resulting in a 200% increase in user engagement.",
-      rating: 5,
       avatar: "/images/testimonials/avatar2.jpg",
     },
     {
       id: 3,
-      name: "Smith",
-      position: "Manager, Web Solutions Ltd.",
+      name: "Nurzhol",
+      position: "Manager, Tech Startup",
       content:
         "Encova Solutions delivered an exceptional web application that exceeded our expectations. Their attention to detail and commitment to quality is unmatched.",
-      rating: 5,
       avatar: "/images/testimonials/avatar3.jpg",
     },
-    {
-      id: 4,
-      name: "William Brown",
-      position: "Manager, E-commerce Solutions",
-      content:
-        "Encova Solutions transformed our e-commerce platform with their expert development and design. The new site is faster, more user-friendly, and has significantly boosted our sales.",
-      rating: 5,
-      avatar: "/images/testimonials/avatar4.jpg",
-    },
+    // {
+    //   id: 4,
+    //   name: "William Brown",
+    //   position: "Manager, E-commerce Solutions",
+    //   content:
+    //     "Encova Solutions transformed our e-commerce platform with their expert development and design. The new site is faster, more user-friendly, and has significantly boosted our sales.",
+    //   avatar: "/images/testimonials/avatar4.jpg",
+    // },
   ],
 
   team: [
@@ -357,7 +386,7 @@ The website focuses on smooth navigation and an engaging user experience, provid
       id: 1,
       name: "Abdul Basit",
       position: "CEO & Founder",
-      bio: "Visionary leader with 3+ years in Tech Industry",
+      bio: "Visionary leader with 4+ years in Tech Industry",
       image: "./ceo.png",
       social: { linkedin: "https://www.linkedin.com/in/abdul-basit-1039b522b" },
     },

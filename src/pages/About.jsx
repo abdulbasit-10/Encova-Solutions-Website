@@ -30,17 +30,17 @@ const About = () => {
   return (
     <div className="bg-white pt-4">
       {/* Hero Section */}
-      <section className="relative py-10 sm:py-16 md:py-20 lg:py-20 xl:py-28 bg-gray-100">
+      <section className="relative py-10 sm:py-16 md:py-20 lg:py-20 xl:py-23 bg-gray-100">
         <div
           className="absolute inset-0 bg-cover bg-center bg-no-repeat"
           style={{ backgroundImage: `url(${AboutHeroImage})` }}
         ></div>
         <div className="relative max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
           <div className="text-center max-w-4xl mx-auto">
-            <h1 className="text-3xl sm:text-4xl md:text-5xl lg:text-6xl xl:text-7xl font-bold text-gray-900 mb-4 sm:mb-6 leading-tight">
+            <h1 className="text-3xl sm:text-4xl md:text-5xl lg:text-6xl xl:text-6xl font-bold text-gray-900 mb-4 sm:mb-6 leading-tight">
               About <span className="text-gray-600">Encova Solutions</span>
             </h1>
-            <p className="text-base sm:text-lg md:text-xl lg:text-2xl text-gray-900 leading-relaxed px-2">
+            <p className="text-base sm:text-lg md:text-xl lg:text-xl text-gray-900 leading-relaxed px-2">
               We are a team of passionate professionals dedicated to
               transforming businesses through innovative technology solutions
               and exceptional service.
@@ -50,23 +50,23 @@ const About = () => {
       </section>
 
       {/* Who We Are */}
-      <section className="py-12 sm:py-16 md:py-20 bg-white">
+      <section className="py-12 bg-white">
         <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
           <div className="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-4 gap-4 sm:gap-6">
-            <Card className="text-center border-2 border-gray-300 p-4 sm:p-6 group">
+            <Card className="text-center border-2 border-gray-300 p-3 sm:p-5 group">
               <div className="flex justify-center items-center">
                 <div className="bg-[#F9FAFB] p-2 rounded-xl transition-all duration-200 group-hover:bg-[#6B7280]">
                   <img
                   src={Projects}
                   alt="members"
-                  className="w-12 h-12 sm:w-14 sm:h-14 transition-all duration-200 group-hover:brightness-0 group-hover:invert"
+                  className="w-10 h-10 sm:w-12 sm:h-12 transition-all duration-200 group-hover:brightness-0 group-hover:invert"
                 />
                 </div>
               </div>
-              <div className="text-3xl sm:text-4xl font-bold text-gray-500 mb-2 mt-3">150+</div>
+              <div className="text-2xl sm:text-3xl font-bold text-gray-500 mb-1 mt-2">150+</div>
               <div className="text-sm sm:text-base text-gray-700">Projects Completed</div>
             </Card>
-            <Card className="text-center border-2 border-gray-300 p-4 sm:p-6 group">
+            <Card className="text-center border-2 border-gray-300 p-3 sm:p-5 group">
               <div className="flex justify-center items-center ">
               
               <div className="bg-[#F9FAFB] p-2 rounded-xl transition-all duration-200 group-hover:bg-[#6B7280]">
@@ -74,41 +74,41 @@ const About = () => {
                 <img
                   src={globalClients}
                   alt="members"
-                  className="w-12 h-12 sm:w-14 sm:h-14 transition-all duration-200 group-hover:brightness-0 group-hover:invert"
+                  className="w-10 h-10 sm:w-12 sm:h-12 transition-all duration-200 group-hover:brightness-0 group-hover:invert"
                 />
                 </div>  
               </div>
-              <div className="text-3xl sm:text-4xl font-bold text-gray-500 mb-2 mt-3">50+</div>
+              <div className="text-2xl sm:text-3xl font-bold text-gray-500 mb-1 mt-2">50+</div>
               <div className="text-sm sm:text-base text-gray-700">Global Clients</div>
             </Card>
-            <Card className="text-center border-2 border-gray-300 p-4 sm:p-6 group">
+            <Card className="text-center border-2 border-gray-300 p-3 sm:p-5 group">
               <div className="flex justify-center items-center ">
                <div className="bg-[#F9FAFB] p-2 rounded-xl transition-all duration-200 group-hover:bg-[#6B7280]">
                  <img
                   src={five}
                   alt="members"
-                  className="w-12 h-12 sm:w-12 sm:h-12 transition-all duration-200 group-hover:brightness-0 group-hover:invert"
+                  className="w-10 h-10 sm:w-11 sm:h-11 transition-all duration-200 group-hover:brightness-0 group-hover:invert"
                 />
                </div>
               </div>
-              <div className="text-3xl sm:text-4xl font-bold text-gray-500 mb-2 mt-3">5+</div>
+              <div className="text-2xl sm:text-3xl font-bold text-gray-500 mb-1 mt-2">5+</div>
               <div className="text-sm sm:text-base text-gray-700">Years Experience</div>
             </Card>
-            <Card className="text-center border-2 border-gray-300 p-4 sm:p-6 group">
+            <Card className="text-center border-2 border-gray-300 p-3 sm:p-5 group">
               <div className="flex justify-center items-center ">
                <div className="bg-[#F9FAFB] p-2 rounded-xl transition-all duration-200 group-hover:bg-[#6B7280]">
                  <img
                   src={members}
                   alt="members"
-                  className="w-12 h-12 sm:w-14 sm:h-14 transition-all duration-200 group-hover:brightness-0 group-hover:invert"
+                  className="w-10 h-10 sm:w-12 sm:h-12 transition-all duration-200 group-hover:brightness-0 group-hover:invert"
                 />
                </div>
               </div>
-              <div className="text-3xl sm:text-4xl font-bold text-gray-500 mb-2 mt-3">50+</div>
+              <div className="text-2xl sm:text-3xl font-bold text-gray-500 mb-1 mt-2">50+</div>
               <div className="text-sm sm:text-base text-gray-700">Team Members</div>
             </Card>
           </div>
-          <div className="flex flex-col gap-8 sm:gap-12 pt-12 sm:pt-16 md:pt-20">
+          <div className="flex flex-col gap-8 pt-12">
             <div className="flex flex-col lg:flex-row justify-center items-center gap-8 lg:gap-12 xl:gap-16 w-[90%] mx-auto">
               <div className="space-y-4 text-gray-600 leading-relaxed text-sm sm:text-base lg:flex-1">
             {/* <SectionTitle title="Your Trusted Technology Partner" centered /> */}
@@ -145,15 +145,15 @@ const About = () => {
       </section>
 
       {/* Mission & Vision */}
-      <section className="py-12 sm:py-16 md:py-20 bg-gray-50">
+      <section className="py-12 bg-gray-50">
         <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
           <div className="grid grid-cols-1 md:grid-cols-2 gap-6 sm:gap-8 w-[80%] mx-auto">
-            <Card className="border-2 border-gray-300 p-8">
-              <div className="text-4xl mb-4 "><img src={mission} alt="mission" className="bg-[#6B7280] p-2 rounded-xl" /></div>
-              <h3 className="text-2xl font-bold text-gray-900 mb-4">
+            <Card className="border-2 border-gray-300 p-5 sm:p-6">
+              <div className="mb-3"><img src={mission} alt="mission" className="w-12 h-12 bg-[#6B7280] p-2 rounded-xl" /></div>
+              <h3 className="text-xl sm:text-2xl font-bold text-gray-900 mb-3">
                 Our Mission
               </h3>
-              <p className="text-gray-600 leading-relaxed">
+              <p className="text-sm sm:text-base text-gray-600 leading-relaxed">
                 To empower businesses with innovative technology solutions that
                 drive growth, enhance efficiency, and create lasting value. We
                 strive to be the catalyst for digital transformation, helping
@@ -161,12 +161,12 @@ const About = () => {
                 landscape.
               </p>
             </Card>
-            <Card className="border-2 border-gray-300 p-8">
-              <div className="text-4xl mb-4"><img src={vision} alt="vision" className="bg-[#6B7280] p-2 rounded-lg" /></div>
-              <h3 className="text-2xl font-bold text-gray-900 mb-4">
+            <Card className="border-2 border-gray-300 p-5 sm:p-6">
+              <div className="mb-3"><img src={vision} alt="vision" className="w-12 h-12 bg-[#6B7280] p-2 rounded-lg" /></div>
+              <h3 className="text-xl sm:text-2xl font-bold text-gray-900 mb-3">
                 Our Vision
               </h3>
-              <p className="text-gray-600 leading-relaxed">
+              <p className="text-sm sm:text-base text-gray-600 leading-relaxed">
                 To become a globally recognized leader in IT solutions and
                 consulting, known for our innovation, quality, and customer
                 satisfaction. We envision a future where technology seamlessly
@@ -179,7 +179,7 @@ const About = () => {
       </section>
 
       {/* Core Values */}
-      <section className="py-12 sm:py-16 md:py-20 bg-white">
+      <section className="py-12 bg-white">
         <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
           <SectionTitle
             title="Our Core Values"
@@ -192,7 +192,7 @@ const About = () => {
             </p>
           </div>
 
-          <div className="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-4 gap-6 sm:gap-8 mt-8 sm:mt-10 md:mt-12">
+          <div className="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-4 gap-4 sm:gap-6 mt-8">
             {[
               {
                 icon: innovation,
@@ -243,14 +243,14 @@ const About = () => {
                   "We adapt quickly to change, embrace challenges, and respond with speed and flexibility in a dynamic world."
               }
             ].map((value, index) => (
-              <Card key={index} className="text-center p-4 sm:p-6 border-2 border-gray-300 group cursor-pointer">
-                <div className="mb-4 inline-block bg-[#F9FAFB] p-3 rounded-xl transition-all duration-200 group-hover:bg-[#6B7280]">
-                  <img src={value.icon} alt={value.icon} className="transition-all duration-200 group-hover:brightness-0 group-hover:invert" />
+              <Card key={index} className="text-center p-3 sm:p-4 border-2 border-gray-300 group cursor-pointer">
+                <div className="mb-2 inline-block bg-[#F9FAFB] p-2 rounded-xl transition-all duration-200 group-hover:bg-[#6B7280]">
+                  <img src={value.icon} alt={value.icon} className="w-8 h-8 sm:w-9 sm:h-9 transition-all duration-200 group-hover:brightness-0 group-hover:invert" />
                 </div>
-                <h3 className="text-lg sm:text-xl font-bold text-gray-900 mb-2 sm:mb-3 group-hover:text-gray-600 transition-colors">
+                <h3 className="text-base font-bold text-gray-900 mb-2 group-hover:text-gray-600 transition-colors">
                   {value.title}
                 </h3>
-                <p className="text-sm sm:text-base text-gray-600">{value.description}</p>
+                <p className="text-xs sm:text-sm text-gray-600 leading-relaxed">{value.description}</p>
               </Card>
             ))}
           </div>
@@ -258,7 +258,7 @@ const About = () => {
       </section>
 
       {/* Why Choose Us */}
-      <section className="py-12 sm:py-16 md:py-20 bg-gray-50">
+      <section className="py-12 bg-gray-50">
         <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
           <SectionTitle
             title="What Sets Us Apart"
@@ -270,7 +270,7 @@ const About = () => {
             </p>
           </div>
 
-          <div className="grid grid-cols-1 md:grid-cols-2 gap-6 sm:gap-8 mt-8 sm:mt-10 md:mt-12">
+          <div className="grid grid-cols-1 md:grid-cols-2 gap-6 sm:gap-8 mt-8">
             {[
               {
                 title: "Expert Team",
@@ -309,15 +309,15 @@ const About = () => {
                 icon: support,
               },
             ].map((item, index) => (
-              <Card key={index} className="flex items-start space-x-3 sm:space-x-4 p-4 sm:p-6 group cursor-pointer border-2 border-gray-200 hover:border-gray-400 bg-white">
-                <div className="text-3xl sm:text-4xl flex-shrink-0 mb-0 inline-block bg-[#F9FAFB] p-3 rounded-xl transition-all duration-200 group-hover:bg-[#6B7280]">
-                  <img src={item.icon} alt={item.icon} className="transition-all duration-200 group-hover:brightness-0 group-hover:invert" />
+              <Card key={index} className="flex items-start space-x-3 p-3 sm:p-5 group cursor-pointer border-2 border-gray-200 hover:border-gray-400 bg-white">
+                <div className="flex-shrink-0 mb-0 inline-block bg-[#F9FAFB] p-2 rounded-xl transition-all duration-200 group-hover:bg-[#6B7280]">
+                  <img src={item.icon} alt={item.icon} className="w-10 h-10 sm:w-11 sm:h-11 transition-all duration-200 group-hover:brightness-0 group-hover:invert" />
                 </div>
                 <div>
-                  <h3 className="text-lg sm:text-xl font-bold text-gray-900 mb-2 group-hover:text-gray-600 transition-colors">
+                  <h3 className="text-base sm:text-lg font-bold text-gray-900 mb-2 group-hover:text-gray-600 transition-colors">
                     {item.title}
                   </h3>
-                  <p className="text-sm sm:text-base text-gray-600">{item.description}</p>
+                  <p className="text-sm text-gray-600">{item.description}</p>
                 </div>
               </Card>
             ))}
@@ -326,25 +326,25 @@ const About = () => {
       </section>
 
       {/* Meet Our Team */}
-      <section className="py-12 sm:py-16 md:py-20 bg-white">
+      <section className="py-12 bg-white">
         <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
           <SectionTitle subtitle="Our Team" title="Meet The Experts" centered />
 
-          <div className="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-3 xl:grid-cols-4 gap-6 sm:gap-8 mt-8 sm:mt-10 md:mt-12">
+          <div className="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-3 xl:grid-cols-4 gap-6 sm:gap-8 mt-8">
             {siteConfig.team.map((member) => (
-              <Card key={member.id} className="text-center group p-4 sm:p-6 border-2 border-gray-200 hover:border-gray-400 bg-white">
-                <div className="w-24 h-24 sm:w-28 sm:h-28 md:w-32 md:h-32 mx-auto mb-3 sm:mb-4 rounded-full bg-gradient-to-br bg-[#555e64] overflow-hidden flex items-center justify-center">
+              <Card key={member.id} className="text-center group p-3 sm:p-5 border-2 border-gray-200 hover:border-gray-400 bg-white">
+                <div className="w-20 h-20 sm:w-24 sm:h-24 md:w-28 md:h-28 mx-auto mb-3 rounded-full bg-gradient-to-br bg-[#555e64] overflow-hidden flex items-center justify-center">
                   <img
                     src={member.image}
                     alt={member.name}
                     className="w-full h-full object-cover"
                   />
                 </div>
-                <h3 className="text-lg sm:text-xl font-bold text-gray-900 mb-1">
+                <h3 className="text-base sm:text-lg font-bold text-gray-900 mb-1">
                   {member.name}
                 </h3>
                 <p className="text-gray-600 text-xs sm:text-sm mb-2 sm:mb-3">{member.position}</p>
-                <p className="text-gray-500 text-xs sm:text-sm mb-3 sm:mb-4">{member.bio}</p>
+                <p className="text-gray-500 text-xs sm:text-sm mb-3">{member.bio}</p>
                 <div className="flex justify-center space-x-3">
                   <a
                     href={member.social.linkedin}
@@ -368,7 +368,7 @@ const About = () => {
       </section>
 
       {/* Careers CTA */}
-      <section className="py-12 sm:py-16 md:py-20 bg-gradient-to-r from-[#6B7280] to-[#4B5563]">
+      {/* <section className="py-12 sm:py-16 md:py-20 bg-gradient-to-r from-[#6B7280] to-[#4B5563]">
         <div className="max-w-4xl mx-auto px-4 sm:px-6 lg:px-8 text-center">
           <h2 className="text-2xl sm:text-3xl md:text-4xl font-bold text-white mb-3 sm:mb-4">
             Join Our Growing Team
@@ -376,7 +376,7 @@ const About = () => {
           <p className="text-base sm:text-lg md:text-xl text-gray-100 mb-6 sm:mb-8">
             We're always looking for talented individuals who are passionate
             about technology
-          </p>
+          </p> */}
           {/* <Button 
               to="/contact" 
               variant="secondary" 
@@ -385,7 +385,7 @@ const About = () => {
             >
               Get Started Today
             </Button> */}
-          <Button
+          {/* <Button
             to="/careers"
             variant="secondary"
             size="large"
@@ -394,7 +394,7 @@ const About = () => {
             View Open Positions
           </Button>
         </div>
-      </section>
+      </section> */}
     </div>
   );
 };

@@ -3,13 +3,13 @@ import Card from '../components/Card';
 
 const CookiePolicy = () => {
   return (
-    <div className="bg-white pt-20">
-      <section className="py-20">
+    <div className="bg-white pt-16">
+      <section className="py-12">
         <div className="max-w-4xl mx-auto px-4 sm:px-6 lg:px-8">
           <h1 className="text-4xl md:text-5xl font-bold text-gray-900 mb-6">Cookie Policy</h1>
           <p className="text-gray-600 mb-8">Last updated: December 6, 2025</p>
 
-          <Card className="mb-8">
+          <Card className="mb-8 p-5 sm:p-6">
             <div className="prose max-w-none text-gray-700">
               <h2 className="text-2xl font-bold text-gray-900 mb-4">1. What Are Cookies</h2>
               <p className="mb-4">
@@ -72,10 +72,10 @@ const CookiePolicy = () => {
                 You have the right to decide whether to accept or reject cookies. You can control and/or delete cookies through your browser settings:
               </p>
               <ul className="list-disc list-inside mb-4 space-y-2">
-                <li><strong>Chrome:</strong> Settings → Privacy and Security → Cookies and other site data</li>
-                <li><strong>Firefox:</strong> Options → Privacy & Security → Cookies and Site Data</li>
-                <li><strong>Safari:</strong> Preferences → Privacy → Cookies and website data</li>
-                <li><strong>Edge:</strong> Settings → Cookies and site permissions</li>
+                <li><strong>Chrome:</strong> Settings -&gt; Privacy and Security -&gt; Cookies and other site data</li>
+                <li><strong>Firefox:</strong> Options -&gt; Privacy & Security -&gt; Cookies and Site Data</li>
+                <li><strong>Safari:</strong> Preferences -&gt; Privacy -&gt; Cookies and website data</li>
+                <li><strong>Edge:</strong> Settings -&gt; Cookies and site permissions</li>
               </ul>
               <p className="mb-4">
                 Please note that if you disable cookies, some features of our website may not function properly.
