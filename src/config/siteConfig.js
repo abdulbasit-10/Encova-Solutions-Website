@@ -398,16 +398,16 @@ The website focuses on smooth navigation and an engaging user experience, provid
       image: "./talha.png",
       social: { linkedin: "https://www.linkedin.com/in/talhan-ahmad" },
     },
-    {
-      id: 3,
-      name: "Abdul Samad",
-      position: "Chief Technology Officer",
-      bio: "Building reliable systems requires both technical depth and strategic vision.",
-      image: "./Samad.jpeg",
-      social: {
-        linkedin: "https://www.linkedin.com/in/abdul-samad-912882284/",
-      },
-    },
+    // {
+    //   id: 3,
+    //   name: "Abdul Samad",
+    //   position: "Chief Technology Officer",
+    //   bio: "Building reliable systems requires both technical depth and strategic vision.",
+    //   image: "./Samad.jpeg",
+    //   social: {
+    //     linkedin: "https://www.linkedin.com/in/abdul-samad-912882284/",
+    //   },
+    // },
     {
       id: 4,
       name: "M. Hanzala",
